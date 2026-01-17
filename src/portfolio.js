@@ -25,9 +25,7 @@ const greeting = {
   subTitle: emoji(
     "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with JavaScript / Reactjs / PHP Laravel / C# Asp .Net Core and some other cool libraries and frameworks."
   ),
-  resumeLink:
-    "Resume2.pdf"
-    , // Set to empty to hide the button
+  resumeLink: "Resume2.pdf", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -48,21 +46,43 @@ const socialMediaLinks = {
 
 // Skills Section
 
-const skillsSection = { title: "What I do", subTitle: emoji( "A passionate Full Stack Software Developer 🚀 having experience in building web applications using JavaScript, React.js, PHP (Laravel), and C# (ASP.NET Core), along with other useful libraries and frameworks." ), skills: [ emoji("⚡ Build responsive and dynamic front-end interfaces using React.js, HTML, CSS, and JavaScript"), emoji("⚡ Develop robust back-end systems with Laravel and ASP.NET Core, including RESTful API integration"), emoji("⚡ Design and optimize relational databases using MySQL, Oracle, and PL/SQL"), emoji("⚡ Customize and extend open-source tools to fit client needs"), emoji("⚡ Troubleshoot deployment issues and streamline workflows using Git, Vercel, and other dev tools"), emoji("⚡ Enhance UI/UX and ensure cross-browser compatibility for seamless user experiences") ], softwareSkills: [], // You can fill this with icons if needed later };
+const skillsSection = {
+  title: "What I do",
+  subTitle: emoji(
+    "A passionate Full Stack Software Developer 🚀 having experience in building web applications using JavaScript, React.js, PHP (Laravel), and C# (ASP.NET Core), along with other useful libraries and frameworks."
+  ),
+  skills: [
+    emoji(
+      "⚡ Build responsive and dynamic front-end interfaces using React.js, HTML, CSS, and JavaScript"
+    ),
+    emoji(
+      "⚡ Develop robust back-end systems with Laravel and ASP.NET Core, including RESTful API integration"
+    ),
+    emoji(
+      "⚡ Design and optimize relational databases using MySQL, Oracle, and PL/SQL"
+    ),
+    emoji("⚡ Customize and extend open-source tools to fit client needs"),
+    emoji(
+      "⚡ Troubleshoot deployment issues and streamline workflows using Git, Vercel, and other dev tools"
+    ),
+    emoji(
+      "⚡ Enhance UI/UX and ensure cross-browser compatibility for seamless user experiences"
+    )
+  ],
+  // softwareSkills: [], // You can fill this with icons if needed later };
 
-
-// const skillsSection = {
-//   title: "What I do",
-//   subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
-//   skills: [
-//     emoji(
-//       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-//     ),
-//     emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-//     emoji(
-//       "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-//     )
-//   ],
+  // const skillsSection = {
+  //   title: "What I do",
+  //   subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  //   skills: [
+  //     emoji(
+  //       "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+  //     ),
+  //     emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+  //     emoji(
+  //       "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+  //     )
+  //   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
@@ -121,56 +141,56 @@ https://fontawesome.com/icons?d=gallery */
   //     fontAwesomeClassname: "fab fa-docker"
   //   }
   // ],
-softwareSkills: [
-  {
-    skillName: "HTML5",
-    fontAwesomeClassname: "fab fa-html5"
-  },
-  {
-    skillName: "CSS3",
-    fontAwesomeClassname: "fab fa-css3-alt"
-  },
-  {
-    skillName: "JavaScript",
-    fontAwesomeClassname: "fab fa-js"
-  },
-  {
-    skillName: "React.js",
-    fontAwesomeClassname: "fab fa-react"
-  },
-  {
-    skillName: "Laravel",
-    fontAwesomeClassname: "fab fa-laravel"
-  },
-  {
-    skillName: "ASP.NET Core",
-    fontAwesomeClassname: "fas fa-code" // No official icon, use generic
-  },
-  {
-    skillName: "MySQL",
-    fontAwesomeClassname: "fas fa-database"
-  },
-  {
-    skillName: "Oracle",
-    fontAwesomeClassname: "fas fa-database" // Same as MySQL
-  },
-  {
-    skillName: "Git",
-    fontAwesomeClassname: "fab fa-git-alt"
-  },
-  {
-    skillName: "Vercel",
-    fontAwesomeClassname: "fas fa-cloud" // No official icon, use generic
-  },
-  {
-    skillName: "Bootstrap",
-    fontAwesomeClassname: "fab fa-bootstrap"
-  },
-  {
-    skillName: "C#",
-    fontAwesomeClassname: "fas fa-code" // No official icon
-  }
-],
+  softwareSkills: [
+    {
+      skillName: "HTML5",
+      fontAwesomeClassname: "fab fa-html5"
+    },
+    {
+      skillName: "CSS3",
+      fontAwesomeClassname: "fab fa-css3-alt"
+    },
+    {
+      skillName: "JavaScript",
+      fontAwesomeClassname: "fab fa-js"
+    },
+    {
+      skillName: "React.js",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "Laravel",
+      fontAwesomeClassname: "fab fa-laravel"
+    },
+    {
+      skillName: "ASP.NET Core",
+      fontAwesomeClassname: "fas fa-code" // No official icon, use generic
+    },
+    {
+      skillName: "MySQL",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Oracle",
+      fontAwesomeClassname: "fas fa-database" // Same as MySQL
+    },
+    {
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
+    },
+    {
+      skillName: "Vercel",
+      fontAwesomeClassname: "fas fa-cloud" // No official icon, use generic
+    },
+    {
+      skillName: "Bootstrap",
+      fontAwesomeClassname: "fab fa-bootstrap"
+    },
+    {
+      skillName: "C#",
+      fontAwesomeClassname: "fas fa-code" // No official icon
+    }
+  ],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -202,8 +222,6 @@ const educationInfo = {
     }
   ]
 };
-
-
 
 // const educationInfo = {
 //   display: true, // Set false to hide this section, defaults to true
@@ -271,7 +289,6 @@ const workExperiences = {
     }
   ]
 };
-
 
 // const workExperiences = {
 //   display: true, //Set it to true to show workExperiences Section
@@ -414,7 +431,6 @@ const achievementSection = {
   ],
   display: true
 };
-
 
 // const achievementSection = {
 //   title: emoji("Achievements And Certifications 🏆 "),
