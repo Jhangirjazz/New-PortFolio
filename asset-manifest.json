@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/New-PortFolio/static/css/main.2e82fa59.css",
+    "main.js": "/New-PortFolio/static/js/main.2e8d6083.js",
+    "static/css/487.b07c68cc.chunk.css": "/New-PortFolio/static/css/487.b07c68cc.chunk.css",
+    "static/js/487.9779af71.chunk.js": "/New-PortFolio/static/js/487.9779af71.chunk.js",
+    "static/css/990.c6a7ee28.chunk.css": "/New-PortFolio/static/css/990.c6a7ee28.chunk.css",
+    "static/js/990.3ff8cbd3.chunk.js": "/New-PortFolio/static/js/990.3ff8cbd3.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/New-PortFolio/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/Agustina.woff": "/New-PortFolio/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/manOnTable.svg": "/New-PortFolio/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/contactMailDark.svg": "/New-PortFolio/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
+    "static/media/developerActivity.svg": "/New-PortFolio/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
+    "static/media/skill.svg": "/New-PortFolio/static/media/skill.35a147662ab0a1d15e579690446e0258.svg",
+    "static/media/resume.pdf": "/New-PortFolio/static/media/resume.f0f733dd3cd732b39262.pdf",
+    "index.html": "/New-PortFolio/index.html",
+    "static/media/talksCardBack.svg": "/New-PortFolio/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
+    "main.2e82fa59.css.map": "/New-PortFolio/static/css/main.2e82fa59.css.map",
+    "main.2e8d6083.js.map": "/New-PortFolio/static/js/main.2e8d6083.js.map",
+    "487.b07c68cc.chunk.css.map": "/New-PortFolio/static/css/487.b07c68cc.chunk.css.map",
+    "487.9779af71.chunk.js.map": "/New-PortFolio/static/js/487.9779af71.chunk.js.map",
+    "990.c6a7ee28.chunk.css.map": "/New-PortFolio/static/css/990.c6a7ee28.chunk.css.map",
+    "990.3ff8cbd3.chunk.js.map": "/New-PortFolio/static/js/990.3ff8cbd3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e82fa59.css",
+    "static/js/main.2e8d6083.js"
+  ]
+}
