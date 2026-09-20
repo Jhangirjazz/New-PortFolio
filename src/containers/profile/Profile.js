@@ -14,9 +14,11 @@ export default function Profile() {
   }
 
   useEffect(() => {
-    if (openSource.showGithubProfile === "true") {
+    if (openSource.showGithubProfile === "true" && openSource.useProfileJson) {
       const getProfileData = () => {
-        fetch("/profile.json")
+        // process.env.PUBLIC_URL keeps this correct when the site is served
+        // from a sub-path such as /New-PortFolio/ on GitHub Pages.
+        fetch(`${process.env.PUBLIC_URL}/profile.json`)
           .then(result => {
             if (result.ok) {
               return result.json();

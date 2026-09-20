@@ -20,10 +20,10 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Muhammad jahangit",
-  title: "Hi all, I'm jahangir",
+  username: "Muhammad Jhangir",
+  title: "Hi all, I'm Jhangir",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web applications with JavaScript / Reactjs / PHP Laravel / C# Asp .Net Core and some other cool libraries and frameworks."
+    "A passionate Full Stack Software Developer 🚀 having experience of building Web applications with JavaScript / React.js / PHP Laravel / C# ASP.NET Core and some other cool libraries and frameworks."
   ),
   resumeLink: "Resume2.pdf", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -53,20 +53,20 @@ const skillsSection = {
   ),
   skills: [
     emoji(
-      "⚡ Build responsive and dynamic front-end interfaces using React.js, HTML, CSS, and JavaScript"
+      "Build responsive and dynamic front-end interfaces using React.js, HTML, CSS, and JavaScript"
     ),
     emoji(
-      "⚡ Develop robust back-end systems with Laravel and ASP.NET Core, including RESTful API integration"
+      "Develop robust back-end systems with Laravel and ASP.NET Core, including RESTful API integration"
     ),
     emoji(
-      "⚡ Design and optimize relational databases using MySQL, Oracle, and PL/SQL"
+      "Design and optimize relational databases using MySQL, Oracle, and PL/SQL"
     ),
-    emoji("⚡ Customize and extend open-source tools to fit client needs"),
+    emoji("Customize and extend open-source tools to fit client needs"),
     emoji(
-      "⚡ Troubleshoot deployment issues and streamline workflows using Git, Vercel, and other dev tools"
+      "Troubleshoot deployment issues and streamline workflows using Git, Vercel, and other dev tools"
     ),
     emoji(
-      "⚡ Enhance UI/UX and ensure cross-browser compatibility for seamless user experiences"
+      "Enhance UI/UX and ensure cross-browser compatibility for seamless user experiences"
     )
   ],
   // softwareSkills: [], // You can fill this with icons if needed later };
@@ -325,36 +325,180 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  githubUsername: "Jhangirjazz", // Used for the token-free REST fallback in Projects.js
+  // Set to true only when `node fetch.js` runs with a GitHub token, which
+  // generates public/profile.json with your pinned repositories. When false,
+  // the section uses the public REST API instead (no token, no 404s).
+  useProfileJson: false,
+  showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
   display: true // Set false to hide this section, defaults to true
+};
+
+// Technology logo icons used by the project cards. Icons are brand-coloured SVGs
+// from https://simpleicons.org and live in src/assets/images/tech.
+const techIcons = {
+  laravel: require("./assets/images/tech/laravel.svg"),
+  php: require("./assets/images/tech/php.svg"),
+  mysql: require("./assets/images/tech/mysql.svg"),
+  nestjs: require("./assets/images/tech/nestjs.svg"),
+  typescript: require("./assets/images/tech/typescript.svg"),
+  nodejs: require("./assets/images/tech/nodedotjs.svg"),
+  react: require("./assets/images/tech/react.svg"),
+  nextjs: require("./assets/images/tech/nextdotjs.svg"),
+  javascript: require("./assets/images/tech/javascript.svg"),
+  wordpress: require("./assets/images/tech/wordpress.svg"),
+  dolibarr: require("./assets/images/tech/dolibarr.svg"),
+  python: require("./assets/images/tech/python.svg"),
+  opencv: require("./assets/images/tech/opencv.svg"),
+  android: require("./assets/images/tech/android.svg")
 };
 
 // Some big projects you have worked on
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "Real-world systems I've customized and deployed",
+  title: "Projects",
+  subtitle:
+    "Production systems, client customizations and personal builds — pulled straight from my GitHub",
   projects: [
     {
-      image: require("./assets/images/dolibar.png"), // Add logo to assets/images
+      projectName: "POS Backend — NestJS",
+      projectDesc:
+        "Backend service for a Point-of-Sale system written in TypeScript on top of NestJS. Built around modular modules/services with DTO validation, exposing the REST endpoints that power the POS client.",
+      stack: [
+        {name: "NestJS", icon: techIcons.nestjs},
+        {name: "TypeScript", icon: techIcons.typescript},
+        {name: "Node.js", icon: techIcons.nodejs}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/POS-Backend-Nest.js"
+        }
+      ]
+    },
+    {
+      projectName: "Stitch & Wash Admin Panel",
+      projectDesc:
+        "Laravel + Blade admin panel for a garment care business. Server-rendered management screens for orders, customers and services, with role-aware access and reporting views.",
+      stack: [
+        {name: "Laravel", icon: techIcons.laravel},
+        {name: "PHP", icon: techIcons.php},
+        {name: "MySQL", icon: techIcons.mysql}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/Stitch-wash-admin-panel"
+        }
+      ]
+    },
+    {
       projectName: "Dolibarr ERP Customization",
       projectDesc:
         "Customized the frontend and backend of Dolibarr ERP for a client, including file upload modules and UI improvements tailored to business workflows.",
+      stack: [
+        {name: "Dolibarr", icon: techIcons.dolibarr},
+        {name: "PHP", icon: techIcons.php},
+        {name: "MySQL", icon: techIcons.mysql}
+      ],
       footerLink: [
         {
-          name: "View Dolibarr",
+          name: "Source Code",
           url: "https://github.com/Jhangirjazz/Dolibarr-" // Or client link if available
         }
       ]
     },
     {
-      image: require("./assets/images/download.png"), // Add logo to assets/images
       projectName: "E-Food Restaurant Management System",
       projectDesc:
         "Integrated SMS API into the backend to trigger real-time notifications for order events like placement, processing, and delivery. Enhanced reliability and customer engagement.",
+      stack: [
+        {name: "Laravel", icon: techIcons.laravel},
+        {name: "PHP", icon: techIcons.php},
+        {name: "MySQL", icon: techIcons.mysql}
+      ],
       footerLink: [
         {
           name: "View E-Food",
           url: "https://codecanyon.net/item/efood-food-delivery-system-with-laravel-admin-panel-delivery-man-app-v10/30320338?srsltid=AfmBOoomr33a4JVoBk2wz3Yx4x5USGzXUEjmnpMs3iuYqWhulRj0EgZL" // Or client link
+        }
+      ]
+    },
+    {
+      projectName: "Weather App",
+      projectDesc:
+        "Forecast checking app built with a modern React + TypeScript stack. Fetches live weather data, renders current conditions and upcoming forecast, with a clean responsive UI.",
+      stack: [
+        {name: "Next.js", icon: techIcons.nextjs},
+        {name: "TypeScript", icon: techIcons.typescript},
+        {name: "React", icon: techIcons.react}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/WeatherApp"
+        }
+      ]
+    },
+    {
+      projectName: "Easy!Appointments — Service Separation",
+      projectDesc:
+        "Extended the open-source Easy!Appointments booking system to separate categories and services, so each provider's offering is grouped and bookable independently.",
+      stack: [
+        {name: "PHP", icon: techIcons.php},
+        {name: "JavaScript", icon: techIcons.javascript},
+        {name: "MySQL", icon: techIcons.mysql}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/EasyAppointments"
+        }
+      ]
+    },
+    {
+      projectName: "Cross-Platform Mobile App",
+      projectDesc:
+        "React Native application targeting both iOS and Android from one JavaScript codebase, with native Android (Kotlin) and iOS (Swift) platform code where the shared layer wasn't enough.",
+      stack: [
+        {name: "React Native", icon: techIcons.react},
+        {name: "JavaScript", icon: techIcons.javascript},
+        {name: "Android", icon: techIcons.android}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/Mobile-App-React-Native"
+        }
+      ]
+    },
+    {
+      projectName: "Face & Eye Detection",
+      projectDesc:
+        "Python computer-vision script that detects faces and eyes in real time using OpenCV Haar cascade classifiers — my first hands-on project with AI/vision pipelines.",
+      stack: [
+        {name: "Python", icon: techIcons.python},
+        {name: "OpenCV", icon: techIcons.opencv}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/Face-and-Eye-Detection"
+        }
+      ]
+    },
+    {
+      projectName: "WordPress Plugins & Themes",
+      projectDesc:
+        "A collection of WordPress plugin and theme work — custom hooks, shortcodes and admin options used to bend WordPress to specific client content requirements.",
+      stack: [
+        {name: "WordPress", icon: techIcons.wordpress},
+        {name: "PHP", icon: techIcons.php},
+        {name: "MySQL", icon: techIcons.mysql}
+      ],
+      footerLink: [
+        {
+          name: "Source Code",
+          url: "https://github.com/Jhangirjazz/Wordpress-Plugins"
         }
       ]
     }
@@ -496,19 +640,19 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "false", // Set "true" to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
+      url: "https://github.com/Jhangirjazz",
+      title: "Customizing Dolibarr ERP for real business workflows",
       description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
+        "How I extended the frontend and backend of an open-source ERP — adding file-upload modules and tailoring the UI to a client's processes."
     },
     {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
+      url: "https://github.com/Jhangirjazz",
+      title: "Wiring an SMS API into a Laravel food-ordering backend",
       description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
+        "Notes on triggering real-time order notifications (placed, processing, delivered) and the reliability problems that came with it."
     }
   ],
   display: false // Set false to hide this section, defaults to true
@@ -522,14 +666,7 @@ const talkSection = {
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
   ),
 
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
+  talks: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -540,9 +677,7 @@ const podcastSection = {
   subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
 
   // Please Provide with Your Podcast embeded Link
-  podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
-  ],
+  podcast: [],
   display: false // Set false to hide this section, defaults to true
 };
 
@@ -559,15 +694,15 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "0331-2242564",
-  email_address: "jhangirjazz590@gmail.com"
+  number: "+92 331 2242564",
+  email_address: "jhangirjazz5900@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  userName: "", // Replace "twitter" with your twitter username without @ (leave empty to hide the feed)
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer

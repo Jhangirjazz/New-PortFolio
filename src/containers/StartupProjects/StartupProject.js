@@ -52,6 +52,28 @@ export default function StartupProject() {
                       ></img>
                     </div>
                   ) : null}
+                  {project.stack ? (
+                    <div className="project-stack">
+                      {project.stack.map((tech, i) => {
+                        return (
+                          <div
+                            key={i}
+                            className="project-stack-item"
+                            title={tech.name}
+                          >
+                            <img
+                              src={tech.icon}
+                              alt={`${tech.name} logo`}
+                              className="project-stack-icon"
+                            />
+                            <span className="project-stack-name">
+                              {tech.name}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : null}
                   <div className="project-detail">
                     <h5
                       className={isDark ? "dark-mode card-title" : "card-title"}

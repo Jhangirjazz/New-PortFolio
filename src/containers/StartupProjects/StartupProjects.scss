@@ -82,6 +82,48 @@
   transition: 0.2s ease-in;
 }
 
+/* Technology logo strip shown on each project card. The tiles deliberately stay
+   light in both themes so brand-coloured icons (and black monochrome ones such
+   as Next.js) stay legible. */
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.9rem 0 0.5rem 0;
+}
+
+.project-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 66px;
+  padding: 0.5rem 0.6rem;
+  background: $lightBackground3;
+  border: 1px solid $lightBorder1;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-stack-item:hover {
+  transform: translateY(-3px);
+  box-shadow: $lightBoxShadowDark 0px 8px 16px -8px;
+}
+
+.project-stack-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.project-stack-name {
+  color: $cardSubtitle;
+  font-size: 0.68rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .project-subtitle {
     font-size: 16px;
