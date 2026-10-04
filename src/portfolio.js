@@ -336,21 +336,26 @@ const openSource = {
 
 // Technology logo icons used by the project cards. Icons are brand-coloured SVGs
 // from https://simpleicons.org and live in src/assets/images/tech.
+//
+// NOTE: CRA routes .svg files through @svgr/webpack, so `require()` returns the ES
+// module namespace object `{ReactComponent, default}` instead of a plain URL string
+// (unlike .png/.webp, which are asset modules). We therefore read `.default` here
+// (the file-loader URL) so that <img src={tech.icon}> actually renders the logo.
 const techIcons = {
-  laravel: require("./assets/images/tech/laravel.svg"),
-  php: require("./assets/images/tech/php.svg"),
-  mysql: require("./assets/images/tech/mysql.svg"),
-  nestjs: require("./assets/images/tech/nestjs.svg"),
-  typescript: require("./assets/images/tech/typescript.svg"),
-  nodejs: require("./assets/images/tech/nodedotjs.svg"),
-  react: require("./assets/images/tech/react.svg"),
-  nextjs: require("./assets/images/tech/nextdotjs.svg"),
-  javascript: require("./assets/images/tech/javascript.svg"),
-  wordpress: require("./assets/images/tech/wordpress.svg"),
-  dolibarr: require("./assets/images/tech/dolibarr.svg"),
-  python: require("./assets/images/tech/python.svg"),
-  opencv: require("./assets/images/tech/opencv.svg"),
-  android: require("./assets/images/tech/android.svg")
+  laravel: require("./assets/images/tech/laravel.svg").default,
+  php: require("./assets/images/tech/php.svg").default,
+  mysql: require("./assets/images/tech/mysql.svg").default,
+  nestjs: require("./assets/images/tech/nestjs.svg").default,
+  typescript: require("./assets/images/tech/typescript.svg").default,
+  nodejs: require("./assets/images/tech/nodedotjs.svg").default,
+  react: require("./assets/images/tech/react.svg").default,
+  nextjs: require("./assets/images/tech/nextdotjs.svg").default,
+  javascript: require("./assets/images/tech/javascript.svg").default,
+  wordpress: require("./assets/images/tech/wordpress.svg").default,
+  dolibarr: require("./assets/images/tech/dolibarr.svg").default,
+  python: require("./assets/images/tech/python.svg").default,
+  opencv: require("./assets/images/tech/opencv.svg").default,
+  android: require("./assets/images/tech/android.svg").default
 };
 
 // Some big projects you have worked on
@@ -372,22 +377,6 @@ const bigProjects = {
         {
           name: "Source Code",
           url: "https://github.com/Jhangirjazz/POS-Backend-Nest.js"
-        }
-      ]
-    },
-    {
-      projectName: "Stitch & Wash Admin Panel",
-      projectDesc:
-        "Laravel + Blade admin panel for a garment care business. Server-rendered management screens for orders, customers and services, with role-aware access and reporting views.",
-      stack: [
-        {name: "Laravel", icon: techIcons.laravel},
-        {name: "PHP", icon: techIcons.php},
-        {name: "MySQL", icon: techIcons.mysql}
-      ],
-      footerLink: [
-        {
-          name: "Source Code",
-          url: "https://github.com/Jhangirjazz/Stitch-wash-admin-panel"
         }
       ]
     },
