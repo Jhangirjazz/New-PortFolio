@@ -55,6 +55,16 @@ USE_GITHUB_DATA=true
 If `USE_GITHUB_DATA` is not `"true"` the fetch is skipped, and the Contact section is rendered in
 place of the GitHub profile card.
 
+To hide a single repository from the cards without deleting or archiving it on GitHub, add its exact
+name to `openSource.excludedRepos` in `src/portfolio.js`:
+
+```js
+const openSource = {
+  excludedRepos: ["Stitch-wash-admin-panel"]
+};
+```
+
+
 ## Deployment
 
 The live site is served from the **`gh-pages`** branch.

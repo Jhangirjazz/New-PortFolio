@@ -5,6 +5,14 @@ import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../../containers/loading/Loading";
 import {fetchPublicRepos} from "../../utils";
+
+// Repos blacklisted in portfolio.js are hidden from both data sources fetched
+// below. Kept at module scope so the effect has no missing dependencies.
+const excludedRepos = openSource.excludedRepos || [];
+const excludedRepoNames = excludedRepos.map(name => name.toLowerCase());
+const isExcludedRepo = name =>
+  excludedRepoNames.includes(String(name).toLowerCase());
+
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
@@ -32,7 +40,11 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          setrepoFunction(
+            response.data.user.pinnedItems.edges.filter(
+              edge => edge && !isExcludedRepo(edge.node.name)
+            )
+          );
         })
         .catch(() => {
           // Fall back to the token-free public REST API so the section still
@@ -44,7 +56,7 @@ export default function Projects() {
             setrepoFunction("Error");
             return;
           }
-          fetchPublicRepos(openSource.githubUsername)
+          fetchPublicRepos(openSource.githubUsername, 6, excludedRepos)
             .then(setrepoFunction)
             .catch(function (error) {
               console.error(

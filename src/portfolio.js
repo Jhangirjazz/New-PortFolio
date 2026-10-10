@@ -34,7 +34,7 @@ const greeting = {
 const socialMediaLinks = {
   github: "https://github.com/Jhangirjazz/",
   linkedin: "https://www.linkedin.com/in/muhammad-jhangir-46a5161b3/",
-  gmail: "jhangirjazz5900@gmail.com",
+  gmail: "jhangirjazz590@gmail.com",
   // gitlab: "https://gitlab.com/saadpasta",
   // facebook: "https://www.facebook.com/saad.pasta7",
   // medium: "https://medium.com/@saadpasta",
@@ -331,6 +331,10 @@ const openSource = {
   // the section uses the public REST API instead (no token, no 404s).
   useProfileJson: false,
   showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
+  // Repository names to keep out of the Open Source Projects cards. The section
+  // is filled from your GitHub account (REST API or public/profile.json), so
+  // this is how you hide a repo without deleting or archiving it on GitHub.
+  excludedRepos: ["Stitch-wash-admin-panel"],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -684,7 +688,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+92 331 2242564",
-  email_address: "jhangirjazz5900@gmail.com"
+  email_address: "jhangirjazz590@gmail.com"
 };
 
 // Twitter Section
